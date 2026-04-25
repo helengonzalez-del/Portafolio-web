@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio Web | Innovación Organizacional en el Poder Ejecutivo BC</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--guinda:#6B0F1A;
+--guinda2:#8C1C2B;
+--guinda3:#F7EEF0;
+--dorado:#C9A227;
+--dorado2:#FFF8E1;
+--texto:#2B1D1F;
+--gris:#6B7280;
+--bg:#FCFAF8;
+--white:#fff;
+--border:#eadfc7;
+}
+html{scroll-behavior:smooth}
+body{
+font-family:Montserrat,sans-serif;
+background:var(--bg);
+color:var(--texto);
+line-height:1.7;
+}
+nav{
+position:sticky;top:0;z-index:100;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(8px);
+padding:18px 8%;
+display:flex;justify-content:space-between;align-items:center;
+border-bottom:1px solid var(--border)
+}
+.brand{font-weight:800;color:var(--guinda);letter-spacing:.08em;font-size:.8rem;text-transform:uppercase}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{text-decoration:none;color:var(--texto);font-weight:600;font-size:.82rem}
+nav a:hover{color:var(--guinda2)}
+.hero{
+background:linear-gradient(135deg,var(--guinda),#4d0912);
+color:white;padding:110px 8% 90px;position:relative;overflow:hidden;
+}
+.hero:before{
+content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(201,162,39,.14)
+}
+.hero-inner{max-width:950px;position:relative;z-index:2}
+.kicker{
+color:var(--dorado);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px
+}
+h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.08;margin-bottom:18px;font-weight:800}
+.hero p{max-width:760px;font-size:1.18rem;color:#f8dfe4}
+.badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:35px}
+.badge{
+padding:10px 18px;border-radius:40px;border:1px solid rgba(255,255,255,.25);font-size:.78rem;font-weight:700
+}
+.badge.gold{background:var(--dorado);color:#2d2204;border:none}
+section{max-width:1100px;margin:auto;padding:85px 8%}
+section.alt{background:white;max-width:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.wrap{max-width:1100px;margin:auto}
+.label{color:var(--guinda2);font-size:.75rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:2.3rem;margin-bottom:28px;color:var(--guinda)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{
+background:white;border:1px solid var(--border);padding:30px;border-radius:18px;
+box-shadow:0 8px 30px rgba(0,0,0,.04)
+}
+.card h3{color:var(--guinda);margin-bottom:14px}
+.card small{display:block;color:var(--dorado);font-weight:800;margin-bottom:8px}
+.callout{
+background:var(--dorado2);border-left:6px solid var(--dorado);
+padding:28px;border-radius:0 16px 16px 0;margin:30px 0
+}
+.callout strong{display:block;color:#8a6c09;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;background:white;border-radius:18px;overflow:hidden}
+thead{background:var(--guinda)}
+th{color:white;padding:18px;text-align:left;font-size:.8rem}
+td{padding:18px;border-bottom:1px solid #eee;vertical-align:top}
+tr:nth-child(even){background:#fcf8f9}
+.tag{background:var(--guinda3);color:var(--guinda);padding:7px 12px;border-radius:30px;font-size:.72rem;font-weight:700}
+.value-grid{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px
+}
+.value{
+background:white;border-radius:20px;padding:30px;border-top:6px solid var(--dorado);
+box-shadow:0 10px 30px rgba(107,15,26,.07)
+}
+.value h4{font-size:1.1rem;color:var(--guinda);margin:12px 0}
+.value ul{padding-left:20px;margin-top:12px}
+.value li{margin:8px 0}
+.flow{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:30px
+}
+.step{
+background:white;padding:30px;border-radius:18px;border:1px solid var(--border)
+}
+.num{font-size:3rem;font-weight:800;color:#ead8a1;line-height:1}
+.step h4{color:var(--guinda);margin:10px 0}
+.highlight{
+background:linear-gradient(135deg,var(--guinda2),var(--guinda));
+color:white;border-radius:28px;padding:50px;margin-top:40px
+}
+.highlight h3{font-size:2rem;margin-bottom:18px}
+footer{
+background:#2b0b10;color:#d9c6a0;text-align:center;padding:45px 20px;font-size:.9rem
+}
+@media(max-width:760px){nav ul{display:none}h2{font-size:1.8rem}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="brand">Meta 4.1 · Portafolio Web</div>
+<ul>
+<li><a href="#org">Organización</a></li>
+<li><a href="#stake">Stakeholders</a></li>
+<li><a href="#valor">Valor</a></li>
+<li><a href="#innovacion">Innovación</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-inner">
+<div class="kicker">Gestión de la Innovación · UABC</div>
+<h1>Modelo de Coordinación e Innovación Organizacional para el Poder Ejecutivo de Baja California</h1>
+<p>Portafolio enfocado en los grupos de interés que permiten mejorar la coordinación entre áreas, agilizar decisiones e impulsar innovación organizacional en el área de informática del Registro Público de la Propiedad y del Comercio.</p>
+<div class="badges">
+<span class="badge gold">Innovación Organizacional</span>
+<span class="badge">Sector Público</span>
+<span class="badge">Área de oportunidad: Estructura</span>
+<span class="badge">Proyecto de mejora interna</span>
+</div>
+</div>
+</section>
+
+<section id="org">
+<div class="label">01 · Presentación de la organización</div>
+<h2>Diagnóstico base del proyecto</h2>
+<div class="grid">
+<div class="card">
+<small>Organización</small>
+<h3>Poder Ejecutivo de Baja California</h3>
+<p>Área analizada: Informática del Registro Público de la Propiedad y del Comercio.</p>
+</div>
+<div class="card">
+<small>Problema detectado</small>
+<h3>Baja eficiencia estructural</h3>
+<p>Procesos jerárquicos retrasan decisiones y dificultan implementar mejoras.</p>
+</div>
+<div class="card">
+<small>Decisión de innovación</small>
+<h3>Modelo de coordinación interna</h3>
+<p>Rediseñar procesos internos para mejorar comunicación y agilizar iniciativas.</p>
+</div>
+</div>
+
+<div class="callout">
+<strong>Hallazgo clave del diagnóstico</strong>
+La innovación propuesta no se centra en crear nueva tecnología, sino en transformar la coordinación organizacional para que las mejoras sí puedan ejecutarse.
+</div>
+</section>
+
+<section class="alt" id="stake">
+<div class="wrap">
+<div class="label">02 · Grupos de interés</div>
+<h2>Actores vinculados con la innovación del proyecto</h2>
+
+<table>
+<thead>
+<tr>
+<th>Grupo de interés</th>
+<th>Tipo</th>
+<th>Papel estratégico</th>
+<th>Relación con innovación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alta Dirección / Mandos de decisión</td>
+<td><span class="tag">Interno</span></td>
+<td>Habilitan cambios organizacionales</td>
+<td>Clave para reducir rigidez y aprobar mejoras</td>
+</tr>
+<tr>
+<td>Personal del Área de Informática</td>
+<td><span class="tag">Interno</span></td>
+<td>Ejecutores de procesos</td>
+<td>Motor de innovación organizacional</td>
+</tr>
+<tr>
+<td>Oficialía Mayor / Hacienda</td>
+<td><span class="tag">Externo</span></td>
+<td>Recursos y soporte institucional</td>
+<td>Respalda implementación del modelo</td>
+</tr>
+<tr>
+<td>Áreas administrativas vinculadas</td>
+<td><span class="tag">Interno</span></td>
+<td>Coordinación transversal</td>
+<td>Permiten mejorar comunicación interáreas</td>
+</tr>
+<tr>
+<td>Ciudadanía usuaria</td>
+<td><span class="tag">Externo</span></td>
+<td>Beneficiario final</td>
+<td>Valida mejoras en servicios</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="valor">
+<div class="label">03 · Propuestas de valor</div>
+<h2>¿Qué ofrece la organización a cada actor?</h2>
+
+<div class="value-grid">
+<div class="value">
+<small>Alta dirección</small>
+<h4>Información para decisiones ágiles</h4>
+<ul>
+<li>Modelo de coordinación más eficiente</li>
+<li>Mejora en flujo de decisiones</li>
+<li>Reducción de retrasos burocráticos</li>
+</ul>
+</div>
+
+<div class="value">
+<small>Personal interno</small>
+<h4>Participación en mejora de procesos</h4>
+<ul>
+<li>Canales para propuestas internas</li>
+<li>Comunicación más fluida</li>
+<li>Procesos menos rígidos</li>
+</ul>
+</div>
+
+<div class="value">
+<small>Oficialía Mayor / Hacienda</small>
+<h4>Eficiencia institucional medible</h4>
+<ul>
+<li>Mejor uso de recursos</li>
+<li>Indicadores de mejora</li>
+<li>Impacto organizacional observable</li>
+</ul>
+</div>
+
+<div class="value">
+<small>Áreas vinculadas</small>
+<h4>Coordinación transversal</h4>
+<ul>
+<li>Procesos interáreas mejor articulados</li>
+<li>Menos duplicidad operativa</li>
+<li>Mayor agilidad administrativa</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="alt" id="innovacion">
+<div class="wrap">
+<div class="label">04 · Relación con innovación</div>
+<h2>Cómo las propuestas impulsan innovación organizacional</h2>
+
+<div class="flow">
+<div class="step">
+<div class="num">01</div>
+<h4>Coordinación entre áreas</h4>
+<p>El proyecto ataca directamente el cuello de botella identificado en el diagnóstico.</p>
+</div>
+
+<div class="step">
+<div class="num">02</div>
+<h4>Agilidad en decisiones</h4>
+<p>Menos rigidez jerárquica permite implementar mejoras con mayor rapidez.</p>
+</div>
+
+<div class="step">
+<div class="num">03</div>
+<h4>Innovación organizacional</h4>
+<p>Se crean nuevas formas de trabajar, coordinar y gestionar procesos internos.</p>
+</div>
+
+<div class="step">
+<div class="num">04</div>
+<h4>Mejor servicio público</h4>
+<p>La innovación interna impacta finalmente en servicios más eficientes al ciudadano.</p>
+</div>
+</div>
+
+<div class="highlight">
+<h3>Conexión diagnóstico → proyecto → innovación</h3>
+<p>
+Hallazgo: baja eficiencia estructural.<br><br>
+Decisión: diseñar un modelo de coordinación y gestión de procesos.<br><br>
+Innovación resultante: transformación organizacional para facilitar mejora continua.
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="label">05 · Conclusión</div>
+<h2>La innovación aquí no es tecnológica: es estructural</h2>
+<div class="callout">
+<strong>Idea central del portafolio</strong>
+Los grupos de interés no se analizaron desde marketing institucional, sino como actores que permiten resolver el problema detectado en el diagnóstico: la coordinación interna. Por eso las propuestas de valor están vinculadas con estructura, procesos e innovación organizacional.
+</div>
+</section>
+
+<footer>
+Portafolio Web Colaborativo · Meta 4.1 · Gestión de la Innovación · UABC<br>
+Diseñado con enfoque guinda y dorado inspirado en identidad institucional.
+</footer>
+
+</body>
+</html>
